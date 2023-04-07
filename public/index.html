@@ -1,0 +1,41 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- 카메라 모듈 스크립트
+    <script>
+      $(document).ready(function(){
+        if (!('url' in window) && ('webkitURL' in window)) {
+            window.URL = window.webkitURL;
+        }
+    
+        $('#camera').change(function(e){
+            $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
+        });
+    });
+    </script> -->
+
+
+  </head>
+  <body>
+
+
+    <!-- 카메라 권한 획득 버튼-->
+    <!-- <label className="input-file-button" for="camera">사진찍기</label>
+    <input type="file" style="display:none" id="camera" name="camera" capture="camera" accept="image/*" />
+    <br/>
+    <img id="pic" style="width:100%;" /> -->
+    
+    <div id="app"></div>
+    {% render_bundle 'app' %}
+    <!-- built files will be auto injected -->
+  </body>
+</html>
