@@ -18,8 +18,8 @@ export default {
     return {
       menuItems: [
         { id: 1, label: 'Home', link: 'http://127.0.0.1:8000/' },
-        { id: 2, label: 'About', link: 'http://127.0.0.1:8000/api/' },
-        { id: 3, label: 'Contact', link: '#' },
+        { id: 2, label: 'About', link: 'http://127.0.0.1:8000/About/' },
+        { id: 3, label: 'Contact', link: 'http://127.0.0.1:8000/Contact/' },
       ],
     }
   },

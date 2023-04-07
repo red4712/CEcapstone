@@ -6,7 +6,10 @@ class HomeView(TemplateView):
   template_name = 'index.html'
 
 class About(TemplateView):
-  template_name = 'About.vue'
+  template_name = 'About.html'
+
+class Contact(TemplateView):
+  template_name = 'Contact.html'
 
 def index(request):
     with open('./data/data.json', 'r') as f:

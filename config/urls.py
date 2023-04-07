@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('', views.HomeView.as_view(), name='home'), #추가
     path('About/', views.About.as_view(), name='About'), #추가
+    path('Contact/', views.Contact.as_view(), name='Contact'), #추가
 
 ]

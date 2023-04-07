@@ -3,7 +3,7 @@
     <h1 class="title">About</h1>
     <div class="about-container">
       <div class="profile-container">
-        <img class="profile-image" src="../assets/author.jpg" alt="profile">
+        <img class="profile-image" src="./assets/author.jpg" alt="profile">
         <h3 class="profile-name">{{ name }}</h3>
       </div>
       <div class="description-container">

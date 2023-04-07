@@ -1,25 +1,25 @@
 {
   "status": "done",
   "assets": {
-    "app.4a65b5920b203f40.hot-update.js": {
-      "name": "app.4a65b5920b203f40.hot-update.js",
-      "path": "C:\\CEcapstone\\static\\dist\\app.4a65b5920b203f40.hot-update.js",
-      "publicPath": "http://localhost:8080/app.4a65b5920b203f40.hot-update.js"
+    "About.html": {
+      "name": "About.html",
+      "path": "C:\\CEcapstone\\static\\dist\\About.html",
+      "publicPath": "http://localhost:8080/About.html"
     },
-    "app.4a65b5920b203f40.hot-update.json": {
-      "name": "app.4a65b5920b203f40.hot-update.json",
-      "path": "C:\\CEcapstone\\static\\dist\\app.4a65b5920b203f40.hot-update.json",
-      "publicPath": "http://localhost:8080/app.4a65b5920b203f40.hot-update.json"
+    "app.f608a94064f414ca.hot-update.js": {
+      "name": "app.f608a94064f414ca.hot-update.js",
+      "path": "C:\\CEcapstone\\static\\dist\\app.f608a94064f414ca.hot-update.js",
+      "publicPath": "http://localhost:8080/app.f608a94064f414ca.hot-update.js"
     },
-    "app.6cc750bc4e1137c5.hot-update.js": {
-      "name": "app.6cc750bc4e1137c5.hot-update.js",
-      "path": "C:\\CEcapstone\\static\\dist\\app.6cc750bc4e1137c5.hot-update.js",
-      "publicPath": "http://localhost:8080/app.6cc750bc4e1137c5.hot-update.js"
+    "app.f608a94064f414ca.hot-update.json": {
+      "name": "app.f608a94064f414ca.hot-update.json",
+      "path": "C:\\CEcapstone\\static\\dist\\app.f608a94064f414ca.hot-update.json",
+      "publicPath": "http://localhost:8080/app.f608a94064f414ca.hot-update.json"
     },
-    "app.6cc750bc4e1137c5.hot-update.json": {
-      "name": "app.6cc750bc4e1137c5.hot-update.json",
-      "path": "C:\\CEcapstone\\static\\dist\\app.6cc750bc4e1137c5.hot-update.json",
-      "publicPath": "http://localhost:8080/app.6cc750bc4e1137c5.hot-update.json"
+    "Contact.html": {
+      "name": "Contact.html",
+      "path": "C:\\CEcapstone\\static\\dist\\Contact.html",
+      "publicPath": "http://localhost:8080/Contact.html"
     },
     "favicon.ico": {
       "name": "favicon.ico",
@@ -70,8 +70,7 @@
   "chunks": {
     "app": [
       "js/chunk-vendors.js",
-      "js/app.js",
-      "app.6cc750bc4e1137c5.hot-update.js"
+      "js/app.js"
     ]
   },
   "publicPath": "http://localhost:8080/"
