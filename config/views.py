@@ -11,6 +11,9 @@ class About(TemplateView):
 class Contact(TemplateView):
   template_name = 'Contact.html'
 
+class Board(TemplateView):
+  template_name = 'Board.html'
+
 def index(request):
     with open('./data/data.json', 'r') as f:
         json_dict = json.loads(f.read())
