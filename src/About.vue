@@ -1,4 +1,5 @@
 <template>
+  <Header></Header>
   <div class="about-page">
     <h1 class="title">About</h1>
     <div class="about-container">
@@ -14,11 +15,19 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
+import Header from './components/Header'
+import Footer from './components/Footer'
 export default {
   name: "About",
+   components: {
+        Header,
+        Footer,
+     },
+  
   data() {
     return {
       name: "서욱현",

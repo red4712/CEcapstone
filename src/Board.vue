@@ -1,4 +1,5 @@
 <template>
+    <Header></Header>
     <div class="board">
       <h1>게시판</h1>
       <ul>
@@ -9,12 +10,19 @@
         </li>
       </ul>
     </div>
+    <Footer></Footer>
   </template>
   
   <script>
+  import Header from './components/Header'
+  import Footer from './components/Footer'
   import axios from 'axios';
   
   export default {
+     components: {
+        Header,
+        Footer,
+     },
     data() {
         return {
             posts: []

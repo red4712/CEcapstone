@@ -1,4 +1,5 @@
 <template>
+  <Header></Header>
   <div class="contact">
     <div class="contact-header">
       <h1>Contact Us</h1>
@@ -21,12 +22,20 @@
       </form>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
+import Header from './components/Header'
+import Footer from './components/Footer'
 export default {
+  components: {
+        Header,
+        Footer,
+     },
   name: "Contact",
 };
+
 </script>
 
 <style scoped>
