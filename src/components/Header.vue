@@ -8,7 +8,13 @@
         </li>
       </ul>
     </nav>
-    <button @click="showModal = true" class="btn btn-primary">Login</button>
+    <button class="btn" @click="showModal = true">
+      <div class="icon-container">
+        <i class="fas fa-sign-in-alt"></i>
+        <i class="fas fa-circle"></i>
+      </div>
+      <span>Login</span>
+    </button>
     <div v-if="showModal" class="modal">
       <div class="modal-content">
         <span class="close" @click="showModal = false">&times;</span>
@@ -24,6 +30,7 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        
       </div>
     </div>
   </div>
@@ -46,68 +53,151 @@ export default {
 }
 </script>
 
-<style>
-.login-btn {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+
+<style scoped>
+/* Style for the header */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-nav ul {
+.header img {
+  margin-right: 10px;
+}
+
+.header nav ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
-  margin-right: 1rem;
+.header nav li {
+  margin-right: 20px;
 }
 
-nav a {
-  color: #333;
+.header nav li:last-child {
+  margin-right: 0;
+}
+
+.header nav a {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
+.header nav a:hover {
+  color: #f1c40f;
+}
+
+.header .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.header .btn .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  position: relative;
+}
+
+.header .btn .icon-container .fa-sign-in-alt {
+  font-size: 20px;
+}
+
+.header .btn .icon-container .fa-circle {
+  font-size: 6px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Style for the modal */
 .modal {
-  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
-  background-color: #f8f8f8;
-  margin: 10% auto;
+  background-color: #1d1d1d;
   padding: 20px;
-  border: 1px solid #888;
-  width: 30%;
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  position: relative;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content h2 {
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.close:hover,
-.close:focus {
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.modal-content .form-group label {
+  font-family: Arial, sans-serif;
+  margin-bottom: 5px;
+}
+
+.modal-content .form-group input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.modal-content button[type=submit] {
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
   color: black;
-  text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 </style>
