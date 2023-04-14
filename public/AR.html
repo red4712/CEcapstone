@@ -1,17 +1,32 @@
-{% load render_bundle from webpack_loader %}
 <!DOCTYPE html>
-<html lang="">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- AR JS script -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
   </head>
   <body>
-    <div id="AR"></div>
-    {% render_bundle 'app' %}
+    <!-- AR JS camera -->
+    <a-scene embedded arjs>
+      <a-nft
+        type="nft"
+        url="public\marker.png"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+        <a-entity
+          gltf-model="/Contact/public/scene.gltf"
+          scale="5 5 5"
+          position="0 0 0"
+        >
+        </a-entity>
+      </a-nft>
+      <a-entity camera></a-entity>
+    </a-scene>
+    <div id="Contact"></div>
   </body>
 </html>
