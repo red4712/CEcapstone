@@ -1,98 +1,81 @@
 <template>
-  <form class="login-form" v-on:submit.prevent="submitForm"> 
-    <div>
-      <label for="id">ID:</label>
-      <input id="id" type="text" v-model="id">
+  <div class="container">
+    <div class="form-container">
+      <form class="login-form" v-on:submit.prevent="submitForm"> 
+        <div>
+          <label for="title">제목:</label>
+          <input id="title" type="text" v-model="title" class="input-field">
+        </div>
+        <div>
+          <label for="content">내용:</label>
+          <input id="content" type="text" v-model="content" class="input-field">
+        </div>
+        <button type="submit" class="submit-button">글쓰기</button>
+      </form>
     </div>
-    <div>
-      <label for="title">Title:</label>
-      <input id="title" type="text" v-model="title">
+    <div class="intro-container">
+      <h3 style="color:black">목포관광 홈페이지에 오신 것을 환영합니다.</h3>
+      <p style="color:black">아름다운 해안 도시 목포와 그 주변 지역을 탐험하세요. 아름다운 자연 경관에서 풍부한 문화 유산에 이르기까지 목포는 모두를 위한 무언가를 가지고 있습니다.</p>
+      <p style="color:black">지역 명소, 이벤트 및 활동을 발견하고 포괄적인 여행 가이드 및 리소스를 사용하여 쉽게 여행 계획을 세우십시오.</p>
+      <p style="color:black">자유게시판 글쓰기를 이용하여 소통해주세요.</p>
     </div>
-    <div>
-      <label for="content">Content:</label>
-      <input id="content" type="text" v-model="content">
-    </div>
-    <button type="submit">Login</button>
-  </form>
+  </div>
 </template>
 
-<script>
-import axios from 'axios'
-export default{
+<style>
+  .container {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #fff;
+  }
 
-  data: function(){
-    return {
-      id: '',
-      password: '',
-      content: '',
-    }
-  },
-  methods: {
-    submitForm: function() {
-      
-      console.log(this.id, this.title, this.content);
-      var url = 'http://127.0.0.1:8000/api/';
-      var data = {
-        id: this.id,
-        title: this.title,
-        content: this.content
-      }
-      axios.post(url, data)
-        .then(function(response){
-        console.log(response);
-       })
-        .catch(function(error){
-          console.log(error);
-        });
-    }
-  }    
-}
-</script>
-<style scoped>
+  .form-container {
+    background-color: #374151;
+    width: 800px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
-.login-form {
-  align-items: flex-start; 
-  display: flex;
-  flex-direction: column;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #24272E;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-}
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #374151;
+    color: #fff;
+  }
 
-.login-form div {
-  margin-bottom: 20px;
-}
+  .submit-button {
+    background-color: #22c55e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
 
-label {
-  font-weight: bold;
-  margin-right: 10px;
-}
+  .submit-button:hover {
+    background-color: #16a34a;
+  }
 
-input {
-  display: block;
-  padding: 5px 10px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+  .title-container {
+    margin-bottom: 20px;
+  }
 
-}
+  .intro-container {
+    float: left;
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 
-button {
-  padding: 8px 15px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-}
-
-button:hover {
-  background-color: #3e8e41;
-}
 </style>

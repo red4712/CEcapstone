@@ -2,30 +2,31 @@
   <footer class="footer">
     <div class="footer__logo">
       <img src="../assets/logo.png" alt="company logo" />
-      <div class="footer__logo-text">Game Company</div>
+      <div class="footer__logo-text">해양도시목포</div>
     </div>
     <div class="footer__links">
       <div class="footer__link-group">
-        <div class="footer__link-group-title">ABOUT US</div>
-        <a href="#">Company</a>
-        <a href="#">News</a>
-        <a href="#">Careers</a>
+        <div class="footer__link-group-title">SNS</div>
+        <a href="#">Discord</a>
+        <a href="#">Instargram</a>
+        <a href="#">Facebook</a>
       </div>
       <div class="footer__link-group">
-        <div class="footer__link-group-title">SERVICES</div>
-        <a href="#">Games</a>
-        <a href="#">Platform</a>
-        <a href="#">Store</a>
+        <div class="footer__link-group-title">서비스</div>
+        <a href="#">게임</a>
+        <a href="#">플렛폼</a>
+        <a href="#">상점</a>
       </div>
       <div class="footer__link-group">
-        <div class="footer__link-group-title">CONTACT US</div>
-        <a href="#">Email</a>
-        <a href="#">Phone</a>
-        <a href="#">Address</a>
+        <div class="footer__link-group-title">문의하기</div>
+        <a href="#">이메일</a>
+        <a href="#">전화번호</a>
+        <a href="#">주소</a>
       </div>
     </div>
     <div class="footer__copy">
-      © 2023 Game Company. All Rights Reserved.
+      © 2023 해양도시목포.
+       <br>컴퓨터공학과 서욱현, 주원빈, 전학수, 박지원, 최태민.
     </div>
   </footer>
 </template>

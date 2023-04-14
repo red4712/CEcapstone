@@ -13,22 +13,22 @@
         <i class="fas fa-sign-in-alt"></i>
         <i class="fas fa-circle"></i>
       </div>
-      <span>Login</span>
+      <span>로그인</span>
     </button>
     <div v-if="showModal" class="modal">
       <div class="modal-content">
         <span class="close" @click="showModal = false">&times;</span>
-        <h2>Login</h2>
+        <h2>회원 로그인</h2>
         <form>
           <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <label for="email">이메일</label>
+            <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요" required>
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            <label for="password">비밀번호</label>
+            <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력해주세요" required>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">로그인</button>
         </form>
         
       </div>
@@ -45,7 +45,8 @@ export default {
         { id: 1, label: 'Home', link: 'http://127.0.0.1:8000/' },
         { id: 2, label: 'About', link: 'http://127.0.0.1:8000/About/' },
         { id: 3, label: 'Contact', link: 'http://127.0.0.1:8000/Contact/' },
-        { id: 4, label: 'Board', link: 'http://127.0.0.1:8000/Board/'}
+        { id: 4, label: 'Board', link: 'http://127.0.0.1:8000/Board/'},
+        { id: 5, label: 'AR', link:"http://127.0.0.1:8000/AR/"}
       ],
       showModal: false,
     }
@@ -61,7 +62,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #000;
+  background-color: #1d1d1d;
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -118,7 +119,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
   position: relative;
 }
 

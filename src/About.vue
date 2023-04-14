@@ -8,9 +8,9 @@
         <h3 class="profile-name">{{ name }}</h3>
       </div>
       <div class="description-container">
-        <h2 class="description-title">Introduction</h2>
+        <h2 class="description-title">소개</h2>
         <p class="description-text">
-          Hello, I am a computer engineering student at XYZ University. I am passionate about software development and I love to explore new technologies. My areas of interest include web development, mobile development, and machine learning.
+          안녕하세요, 저는 목포대학교 컴퓨터공학과 학생입니다. 저는 소프트웨어 개발에 열정적이며 새로운 기술을 탐구하는 것을 좋아합니다. 제 관심 분야는 웹 개발, 모바일 개발, 기계 학습입니다.
         </p>
       </div>
     </div>
