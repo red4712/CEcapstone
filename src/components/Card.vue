@@ -52,6 +52,8 @@
 </template>
 <style>
 .card {
+  margin-left: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +63,6 @@
   border-radius: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s ease-in-out;
-  
 }
 
 .card:hover {

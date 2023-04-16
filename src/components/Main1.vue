@@ -22,6 +22,35 @@
   </div>
 </template>
 
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      title: '',
+      content: ''
+    };
+  },
+  methods: {
+    submitForm() {
+      axios.post('http://127.0.0.1:8000/api/', {
+        title: this.title,
+        content: this.content
+      })
+      .then(response => {
+        console.log(response.data);
+        // 데이터 전송 성공 시 처리할 코드 작성
+      })
+      .catch(error => {
+        console.log(error);
+        // 데이터 전송 실패 시 처리할 코드 작성
+      });
+    }
+  }
+}
+</script>
+
 <style>
   .container {
     display: flex;

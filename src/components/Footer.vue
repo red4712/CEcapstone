@@ -7,21 +7,21 @@
     <div class="footer__links">
       <div class="footer__link-group">
         <div class="footer__link-group-title">SNS</div>
-        <a href="#">Discord</a>
-        <a href="#">Instargram</a>
-        <a href="#">Facebook</a>
+        <a href="https://discord.com/">Discord</a>
+        <a href="https://www.instagram.com/">Instargram</a>
+        <a href="https://ko-kr.facebook.com/">Facebook</a>
       </div>
       <div class="footer__link-group">
         <div class="footer__link-group-title">서비스</div>
-        <a href="#">게임</a>
-        <a href="#">플렛폼</a>
-        <a href="#">상점</a>
+        <a href="https://play.google.com/store/games">게임</a>
+        <a href="https://www.expedia.co.kr/Mokpo.dx2399">관광지</a>
+        <a href="https://www.tripadvisor.co.kr/Attractions-g1074117-Activities-c26-t144-Mokpo_Jeollanam_do.html">상점</a>
       </div>
       <div class="footer__link-group">
         <div class="footer__link-group-title">문의하기</div>
-        <a href="#">이메일</a>
-        <a href="#">전화번호</a>
-        <a href="#">주소</a>
+        <a href="https://mail.naver.com/">이메일</a>
+        <a href="https://www.mokpo.go.kr/tour/tourguide/information/desk">전화번호</a>
+        <a href="https://m.place.naver.com/place/34807808/home?entry=ple">주소</a>
       </div>
     </div>
     <div class="footer__copy">

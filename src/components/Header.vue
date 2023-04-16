@@ -79,7 +79,7 @@ export default {
 }
 
 .header nav li {
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .header nav li:last-child {
