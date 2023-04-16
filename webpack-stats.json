@@ -3,9 +3,10 @@
   "assets": {
     "About.html": {
       "name": "About.html",
-      "path": "C:\\CEcapstone\\static\\dist\\About.html",
+      "path": "C:\\static\\dist\\About.html",
       "publicPath": "http://localhost:8080/About.html"
     },
+<<<<<<< HEAD
     "app.036b165536a6ebcd.hot-update.js": {
       "name": "app.036b165536a6ebcd.hot-update.js",
       "path": "C:\\CEcapstone\\static\\dist\\app.036b165536a6ebcd.hot-update.js",
@@ -655,70 +656,91 @@
       "name": "app.fc7167ef7604aecb.hot-update.json",
       "path": "C:\\CEcapstone\\static\\dist\\app.fc7167ef7604aecb.hot-update.json",
       "publicPath": "http://localhost:8080/app.fc7167ef7604aecb.hot-update.json"
+=======
+    "app.5e41d8991f31fb15.hot-update.js": {
+      "name": "app.5e41d8991f31fb15.hot-update.js",
+      "path": "C:\\static\\dist\\app.5e41d8991f31fb15.hot-update.js",
+      "publicPath": "http://localhost:8080/app.5e41d8991f31fb15.hot-update.js"
+    },
+    "app.5e41d8991f31fb15.hot-update.json": {
+      "name": "app.5e41d8991f31fb15.hot-update.json",
+      "path": "C:\\static\\dist\\app.5e41d8991f31fb15.hot-update.json",
+      "publicPath": "http://localhost:8080/app.5e41d8991f31fb15.hot-update.json"
+    },
+    "app.fb455709657394e5.hot-update.js": {
+      "name": "app.fb455709657394e5.hot-update.js",
+      "path": "C:\\static\\dist\\app.fb455709657394e5.hot-update.js",
+      "publicPath": "http://localhost:8080/app.fb455709657394e5.hot-update.js"
+    },
+    "app.fb455709657394e5.hot-update.json": {
+      "name": "app.fb455709657394e5.hot-update.json",
+      "path": "C:\\static\\dist\\app.fb455709657394e5.hot-update.json",
+      "publicPath": "http://localhost:8080/app.fb455709657394e5.hot-update.json"
+>>>>>>> 0543e7cbc85d62f8276e90f9483fe3849be3b1da
     },
     "AR.html": {
       "name": "AR.html",
-      "path": "C:\\CEcapstone\\static\\dist\\AR.html",
+      "path": "C:\\static\\dist\\AR.html",
       "publicPath": "http://localhost:8080/AR.html"
     },
     "Board.html": {
       "name": "Board.html",
-      "path": "C:\\CEcapstone\\static\\dist\\Board.html",
+      "path": "C:\\static\\dist\\Board.html",
       "publicPath": "http://localhost:8080/Board.html"
     },
     "Contact.html": {
       "name": "Contact.html",
-      "path": "C:\\CEcapstone\\static\\dist\\Contact.html",
+      "path": "C:\\static\\dist\\Contact.html",
       "publicPath": "http://localhost:8080/Contact.html"
     },
     "demo.html": {
       "name": "demo.html",
-      "path": "C:\\CEcapstone\\static\\dist\\demo.html",
+      "path": "C:\\static\\dist\\demo.html",
       "publicPath": "http://localhost:8080/demo.html"
     },
     "favicon.ico": {
       "name": "favicon.ico",
-      "path": "C:\\CEcapstone\\static\\dist\\favicon.ico",
+      "path": "C:\\static\\dist\\favicon.ico",
       "publicPath": "http://localhost:8080/favicon.ico"
     },
     "img/author.afdc946d.jpg": {
       "name": "img/author.afdc946d.jpg",
-      "path": "C:\\CEcapstone\\static\\dist\\img\\author.afdc946d.jpg",
+      "path": "C:\\static\\dist\\img\\author.afdc946d.jpg",
       "publicPath": "http://localhost:8080/img/author.afdc946d.jpg"
     },
     "img/card1.f46edd71.png": {
       "name": "img/card1.f46edd71.png",
-      "path": "C:\\CEcapstone\\static\\dist\\img\\card1.f46edd71.png",
+      "path": "C:\\static\\dist\\img\\card1.f46edd71.png",
       "publicPath": "http://localhost:8080/img/card1.f46edd71.png"
     },
     "img/card2.e672c677.png": {
       "name": "img/card2.e672c677.png",
-      "path": "C:\\CEcapstone\\static\\dist\\img\\card2.e672c677.png",
+      "path": "C:\\static\\dist\\img\\card2.e672c677.png",
       "publicPath": "http://localhost:8080/img/card2.e672c677.png"
     },
     "img/card3.e219eca0.png": {
       "name": "img/card3.e219eca0.png",
-      "path": "C:\\CEcapstone\\static\\dist\\img\\card3.e219eca0.png",
+      "path": "C:\\static\\dist\\img\\card3.e219eca0.png",
       "publicPath": "http://localhost:8080/img/card3.e219eca0.png"
     },
     "img/card4.c2e9be8c.png": {
       "name": "img/card4.c2e9be8c.png",
-      "path": "C:\\CEcapstone\\static\\dist\\img\\card4.c2e9be8c.png",
+      "path": "C:\\static\\dist\\img\\card4.c2e9be8c.png",
       "publicPath": "http://localhost:8080/img/card4.c2e9be8c.png"
     },
     "index.html": {
       "name": "index.html",
-      "path": "C:\\CEcapstone\\static\\dist\\index.html",
+      "path": "C:\\static\\dist\\index.html",
       "publicPath": "http://localhost:8080/index.html"
     },
     "js/app.js": {
       "name": "js/app.js",
-      "path": "C:\\CEcapstone\\static\\dist\\js\\app.js",
+      "path": "C:\\static\\dist\\js\\app.js",
       "publicPath": "http://localhost:8080/js/app.js"
     },
     "js/chunk-vendors.js": {
       "name": "js/chunk-vendors.js",
-      "path": "C:\\CEcapstone\\static\\dist\\js\\chunk-vendors.js",
+      "path": "C:\\static\\dist\\js\\chunk-vendors.js",
       "publicPath": "http://localhost:8080/js/chunk-vendors.js"
     }
   },
@@ -726,10 +748,17 @@
     "app": [
       "js/chunk-vendors.js",
       "js/app.js",
+<<<<<<< HEAD
       "app.f59a2dbc7c79c595.hot-update.js"
     ]
   },
   "publicPath": "http://localhost:8080/",
   "error": "ModuleBuildError",
   "message": "Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nSyntaxError\n\n(20:31) C:\\CEcapstone\\CEcapstone\\src\\Board.vue Missed semicolon\n\n  18 |         margin-bottom: 20px;\n  19 |         padding: 20px;\n> 20 |         background-color: #fff\n     |                               ^\n  21 |         color: white;\n  22 |     }\n"
+=======
+      "app.fb455709657394e5.hot-update.js"
+    ]
+  },
+  "publicPath": "http://localhost:8080/"
+>>>>>>> 0543e7cbc85d62f8276e90f9483fe3849be3b1da
 }
