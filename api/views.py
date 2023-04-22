@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework import generics
+from .models import Post, Test, Question, Answer
+from .serializers import PostSerializer, TestSerializer, QuestionSerializer, AnswerSerializer
 
-from .models import Post, Test
-from .serializers import PostSerializer, TestSerializer
+
 
 class ListPost(generics.ListCreateAPIView):
     queryset = Post.objects.all()
@@ -20,7 +21,21 @@ class DetailGet(generics.RetrieveUpdateDestroyAPIView):
     queryset = Test.objects.all()
     serializer_class = TestSerializer
 
+class QuestionPost(generics.ListCreateAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
 
+class QuestionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
+class AnswerPost(generics.ListCreateAPIView):
+    queryset = Answer.objects.all()
+    serializer_class = AnswerSerializer
+
+class AnswerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Answer.objects.all()
+    serializer_class = AnswerSerializer
 def demo(requests):
     query = Post.objects.all()
     context = {"context":query}

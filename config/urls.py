@@ -22,9 +22,11 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('', views.HomeView.as_view(), name='home'), #추가
     path('About/', views.About.as_view(), name='About'), #추가
-    path('Contact/', views.Contact.as_view(), name='Contact'), #추가
+    path('QnA/', views.QnA.as_view(), name='QnA'), #추가
     path('Board/', views.Board.as_view(), name='Board'), #추가
-    path('AR/', views.AR.as_view(), name='Board'), #추가
+    path('AR/', views.AR.as_view(), name='AR'), #추가
+    path('Game/', views.Game.as_view(), name='Game'), #추가
+
 
 
 ]

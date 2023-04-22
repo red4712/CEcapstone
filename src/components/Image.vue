@@ -1,16 +1,15 @@
 <template>
   <div class="slider-container">
-    <div class="slider-wrapper" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+    <div
+      class="slider-wrapper"
+      :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+    >
       <div class="slider-slide" v-for="(image, index) in images" :key="index">
         <img :src="image" />
       </div>
     </div>
-    <button class="slider-button slider-button-prev" @click="prevSlide">
-      &lt;
-    </button>
-    <button class="slider-button slider-button-next" @click="nextSlide">
-      &gt;
-    </button>
+    <button class="slider-button slider-button-prev" @click="prevSlide">&lt;</button>
+    <button class="slider-button slider-button-next" @click="nextSlide">&gt;</button>
   </div>
 </template>
 
@@ -19,30 +18,31 @@ export default {
   data() {
     return {
       images: [
-        require('@/assets/card1.png'),
-        require('@/assets/card2.png'),
-        require('@/assets/card3.png'),
-        require('@/assets/card4.png')
+        require("@/assets/card1.png"),
+        require("@/assets/card2.png"),
+        require("@/assets/card3.png"),
+        require("@/assets/card4.png"),
       ],
       currentSlide: 0,
-      timerId: null
-    }
+      timerId: null,
+    };
   },
   mounted() {
-    this.timerId = setInterval(this.nextSlide, 5000)
+    this.timerId = setInterval(this.nextSlide, 5000);
   },
   beforeUnmount() {
-    clearInterval(this.timerId)
+    clearInterval(this.timerId);
   },
   methods: {
     nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.images.length
+      this.currentSlide = (this.currentSlide + 1) % this.images.length;
     },
     prevSlide() {
-      this.currentSlide = (this.currentSlide - 1 + this.images.length) % this.images.length
-    }
-  }
-}
+      this.currentSlide =
+        (this.currentSlide - 1 + this.images.length) % this.images.length;
+    },
+  },
+};
 </script>
 
 <style>

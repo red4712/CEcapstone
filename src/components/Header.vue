@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="../assets/logo.png" alt="Logo" style="width: 70px; height: 70px;">
+    <img src="../assets/logo.png" alt="Logo" style="width: 70px; height: 70px" />
     <nav>
       <ul>
         <li v-for="item in menuItems" :key="item.id">
@@ -22,15 +22,26 @@
         <form>
           <div class="form-group">
             <label for="email">이메일</label>
-            <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요" required>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="이메일을 입력해주세요"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="password">비밀번호</label>
-            <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력해주세요" required>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
           </div>
           <button type="submit" class="btn btn-primary">로그인</button>
         </form>
-        
       </div>
     </div>
   </div>
@@ -38,22 +49,22 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   data() {
     return {
       menuItems: [
-        { id: 1, label: 'Home', link: 'http://127.0.0.1:8000/' },
-        { id: 2, label: 'About', link: 'http://127.0.0.1:8000/About/' },
-        { id: 3, label: 'Contact', link: 'http://127.0.0.1:8000/Contact/' },
-        { id: 4, label: 'Board', link: 'http://127.0.0.1:8000/Board/'},
-        { id: 5, label: 'AR', link:"http://127.0.0.1:8000/AR/"}
+        { id: 1, label: "Home", link: "http://127.0.0.1:8000/" },
+        { id: 2, label: "About", link: "http://127.0.0.1:8000/About/" },
+        { id: 3, label: "QnA", link: "http://127.0.0.1:8000/QnA/" },
+        { id: 4, label: "Board", link: "http://127.0.0.1:8000/Board/" },
+        { id: 5, label: "AR", link: "http://127.0.0.1:8000/AR/" },
+        { id: 6, label: "Game", link: "http://127.0.0.1:8000/Game/" },
       ],
       showModal: false,
-    }
+    };
   },
-}
+};
 </script>
-
 
 <style scoped>
 /* Style for the header */
@@ -141,7 +152,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +201,7 @@ export default {
   font-size: 16px;
 }
 
-.modal-content button[type=submit] {
+.modal-content button[type="submit"] {
   background-color: #f1c40f;
   border: none;
   border-radius: 5px;

@@ -1,6 +1,12 @@
 <template>
   <div class="navbar">
-    <div class="navbar__item" v-for="(item, index) in items" :key="index" :class="{ 'active': index === activeItem }" @click="setActiveItem(index)">
+    <div
+      class="navbar__item"
+      v-for="(item, index) in items"
+      :key="index"
+      :class="{ active: index === activeItem }"
+      @click="setActiveItem(index)"
+    >
       <div class="navbar__item__icon">
         <i :class="item.icon"></i>
       </div>
@@ -44,6 +50,7 @@ export default {
 
 <style scoped>
 .navbar {
+  z-index: 999;
   position: fixed;
   top: 50%;
   right: 0;

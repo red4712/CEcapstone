@@ -8,14 +8,17 @@ class HomeView(TemplateView):
 class About(TemplateView):
   template_name = 'About.html'
 
-class Contact(TemplateView):
-  template_name = 'Contact.html'
+class QnA(TemplateView):
+  template_name = 'QnA.html'
 
 class Board(TemplateView):
   template_name = 'Board.html'
 
 class AR(TemplateView):
   template_name = 'AR.html'
+
+class Game(TemplateView):
+  template_name = 'Game.html'
 
 def index(request):
     with open('./data/data.json', 'r') as f:

@@ -4,13 +4,31 @@
     <h1 class="title">About</h1>
     <div class="about-container">
       <div class="profile-container">
-        <img class="profile-image" src="./assets/author.jpg" alt="profile">
-        <h3 class="profile-name">{{ name }}</h3>
+        <img class="profile-image" src="./assets/author.jpg" alt="profile" />
+        <h3 class="profile-name">서욱현</h3>
       </div>
       <div class="description-container">
         <h2 class="description-title">소개</h2>
         <p class="description-text">
-          안녕하세요, 저는 목포대학교 컴퓨터공학과 학생입니다. 저는 소프트웨어 개발에 열정적이며 새로운 기술을 탐구하는 것을 좋아합니다. 제 관심 분야는 웹 개발, 모바일 개발, 기계 학습입니다.
+          안녕하세요, 저는 목포대학교 컴퓨터공학과 학생입니다. 저는 소프트웨어 개발에
+          열정적이며 새로운 기술을 탐구하는 것을 좋아합니다. 제 관심 분야는 웹 개발,
+          모바일 개발, 기계 학습입니다.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about-page">
+    <div class="about-container">
+      <div class="profile-container">
+        <img class="profile-image" src="./assets/author.jpg" alt="profile" />
+        <h3 class="profile-name">전학수</h3>
+      </div>
+      <div class="description-container">
+        <h2 class="description-title">소개</h2>
+        <p class="description-text">
+          안녕하세요 박종우 유튜브 트위치를 항상 챙겨보는 전학수입니다 삶이란 시련과 같은
+          말이야~ 고개좀 들고좀 어깨 펴 짜샤~ 형도 그랬단다 죽고싶었지만~ 견뎌~....
+          보니...! 갠찬더라~
         </p>
       </div>
     </div>
@@ -19,40 +37,14 @@
 </template>
 
 <script>
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 export default {
   name: "About",
-   components: {
-        Header,
-        Footer,
-     },
-  
-  data() {
-    return {
-      name: "서욱현",
-      lastScrollY: 0
-    };
+  components: {
+    Header,
+    Footer,
   },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.lastScrollY = window.scrollY;
-    }
-  },
-  computed: {
-    profileNameStyle() {
-      return {
-        opacity: this.lastScrollY > 200 ? 1 : this.lastScrollY / 200,
-        transform: `translateY(${this.lastScrollY / 2}px)`
-      };
-    }
-  }
 };
 </script>
 
