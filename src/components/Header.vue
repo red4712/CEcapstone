@@ -13,13 +13,14 @@
         <i class="fas fa-sign-in-alt"></i>
         <i class="fas fa-circle"></i>
       </div>
-      <span>로그인</span>
+      <span v-if="userName">{{ userName }} 님</span>
+      <span v-else>로그인</span>
     </button>
     <div v-if="showModal" class="modal">
       <div class="modal-content">
         <span class="close" @click="showModal = false">&times;</span>
         <h2>회원 로그인</h2>
-        <form>
+        <form @submit.prevent="submitLogin">
           <div class="form-group">
             <label for="email">이메일</label>
             <input
@@ -28,6 +29,7 @@
               id="email"
               placeholder="이메일을 입력해주세요"
               required
+              v-model="email"
             />
           </div>
           <div class="form-group">
@@ -38,6 +40,7 @@
               id="password"
               placeholder="비밀번호를 입력해주세요"
               required
+              v-model="password"
             />
           </div>
           <button type="submit" class="btn btn-primary">로그인</button>
@@ -61,7 +64,39 @@ export default {
         { id: 6, label: "Game", link: "http://127.0.0.1:8000/Game/" },
       ],
       showModal: false,
+      email: "",
+      password: "",
+      userName: "",
     };
+  },
+  created() {
+    // 로그인한 사용자 정보가 localStorage에 저장되어 있는지 확인
+    const user = localStorage.getItem("user");
+    if (user) {
+      // 사용자 이름 보여주기
+      this.userName = JSON.parse(user).username;
+    }
+  },
+  methods: {
+    async submitLogin() {
+      const response = await fetch("http://127.0.0.1:8000/api/User/");
+      const users = await response.json();
+      const user = users.find(
+        (u) => u.email === this.email && u.password === this.password
+      );
+      if (user) {
+        // 로그인 성공
+        alert("로그인 성공!");
+        this.showModal = false;
+        // 사용자 정보 localStorage에 저장
+        localStorage.setItem("user", JSON.stringify(user));
+        // 사용자 이름 보여주기
+        this.userName = user.username;
+      } else {
+        // 로그인 실패
+        alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+      }
+    },
   },
 };
 </script>

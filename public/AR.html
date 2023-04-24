@@ -1,3 +1,4 @@
+{% load render_bundle from webpack_loader %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +20,7 @@
         smoothThreshold="5"
       >
         <a-entity
-          gltf-model="/Contact/public/scene.gltf"
+          gltf-model="/AR/public/scene.gltf"
           scale="5 5 5"
           position="0 0 0"
         >
@@ -27,6 +28,7 @@
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
-    <div id="Contact"></div>
+    <div id="AR"></div>
+    {% render_bundle 'app' %}
   </body>
 </html>

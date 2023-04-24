@@ -12,6 +12,11 @@ class Test(models.Model):
     testage = models.TextField()
     tesslk = models.TextField()
 
+class User(models.Model):
+    username= models.CharField(max_length=200)
+    email = models.TextField()
+    password = models.TextField()
+
 class Question(models.Model):
     subject = models.CharField(max_length=200)
     modify_date = models.DateTimeField(null=True, blank=True)

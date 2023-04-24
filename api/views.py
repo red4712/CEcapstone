@@ -2,6 +2,11 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Post, Test, Question, Answer
 from .serializers import PostSerializer, TestSerializer, QuestionSerializer, AnswerSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
 
 
 
@@ -36,7 +41,13 @@ class AnswerPost(generics.ListCreateAPIView):
 class AnswerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Answer.objects.all()
     serializer_class = AnswerSerializer
-def demo(requests):
-    query = Post.objects.all()
-    context = {"context":query}
-    return render(requests, 'demo.html', context)
+
+class UserView(APIView):
+    def get(self, request, format=None):
+        users = User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)
+    
+class UserPost(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
