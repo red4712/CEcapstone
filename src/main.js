@@ -5,7 +5,7 @@ import QnA from './QnA.vue'
 import Board from './Board.vue'
 import AR from './AR.vue'
 import Game from './Game.vue'
-
+import '@babel/polyfill'
 createApp(App).mount('#app') 
 createApp(About).mount('#About')
 createApp(QnA).mount('#QnA')

@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="../assets/logo.png" alt="Logo" style="width: 70px; height: 70px" />
+    <img src="../assets/로고.webp" alt="Logo" style="width: 70px; height: 70px" />
     <nav>
       <ul>
         <li v-for="item in menuItems" :key="item.id">
@@ -104,6 +104,7 @@ export default {
 <style scoped>
 /* Style for the header */
 .header {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,7 +126,7 @@ export default {
 }
 
 .header nav li {
-  margin-right: 50px;
+  margin-right: 150px;
 }
 
 .header nav li:last-child {
@@ -139,9 +140,9 @@ export default {
   transition: all 0.3s ease;
 }
 
-.header nav a:hover {
+/* .header nav a:hover {
   color: #f1c40f;
-}
+} */
 
 .header .btn {
   display: flex;

@@ -21,14 +21,58 @@
     <div class="about-container">
       <div class="profile-container">
         <img class="profile-image" src="./assets/author.jpg" alt="profile" />
+        <h3 class="profile-name">주원빈</h3>
+      </div>
+      <div class="description-container">
+        <h2 class="description-title">소개</h2>
+        <p class="description-text">
+          주원빈은 컴퓨터공학과 학생으로, 컴퓨터공학 분야에서의 지식과 기술을 습득하고 자신의 역량을 향상시키고자 노력하고 있습니다. 프로그래밍 언어에 대한 지식과 활용능력을 보유하며, 알고리즘과 데이터 구조를 이해하고 다양한 문제를 해결해나갈 수 있는 능력을 지니고 있습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="about-page">
+    <div class="about-container">
+      <div class="profile-container">
+        <img class="profile-image" src="./assets/author.jpg" alt="profile" />
+        <h3 class="profile-name">박지원</h3>
+      </div>
+      <div class="description-container">
+        <h2 class="description-title">소개</h2>
+        <p class="description-text">
+박지원은 컴퓨터공학과 학생으로, 컴퓨터 시스템에 대한 이해와 응용 능력을 가지고 있습니다. 프로그래밍 언어와 웹 개발 분야에서 지식과 기술을 습득하고, 다양한 프로젝트 경험을 통해 협업과 문제해결 능력을 향상시켜 나가고 있습니다. 창의적인 생각과 문제 해결 능력을 바탕으로 좋은 결과를 도출해내는 능력을 가지고 있습니다.
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="about-page">
+    <div class="about-container">
+      <div class="profile-container">
+        <img class="profile-image" src="./assets/author.jpg" alt="profile" />
+        <h3 class="profile-name">최태민</h3>
+      </div>
+      <div class="description-container">
+        <h2 class="description-title">소개</h2>
+        <p class="description-text">
+          최태민은 컴퓨터공학과 학생으로, 컴퓨터 시스템과 웹 개발에 대한 지식과 역량을 보유하고 있습니다. 프로그래밍 언어와 데이터베이스 등 다양한 분야에서 경험과 지식을 쌓아가며, 새로운 기술 동향과 트렌드에 관심을 가지고 자신의 능력을 끊임없이 발전시키고 있습니다. 창의적인 문제 해결 능력과 성실한 태도를 가지고 다양한 프로젝트를 성공적으로 수행한 경험이 있습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="about-page">
+    <div class="about-container">
+      <div class="profile-container">
+        <img class="profile-image" src="./assets/author.jpg" alt="profile" />
         <h3 class="profile-name">전학수</h3>
       </div>
       <div class="description-container">
         <h2 class="description-title">소개</h2>
         <p class="description-text">
-          안녕하세요 박종우 유튜브 트위치를 항상 챙겨보는 전학수입니다 삶이란 시련과 같은
-          말이야~ 고개좀 들고좀 어깨 펴 짜샤~ 형도 그랬단다 죽고싶었지만~ 견뎌~....
-          보니...! 갠찬더라~
+          전학수 교수님은 현재 서울대학교 컴퓨터공학부에서 교수로 활동하고 있는 컴퓨터 공학자입니다. 그는 미국 캘리포니아 대학교 버클리 캠퍼스에서 박사학위를 받았으며, 이전에는 애플(Apple)에서 시스템 소프트웨어 엔지니어로 일했습니다.
+
+전학수 교수님은 운영체제, 가상화 기술, 분산 시스템 등의 분야에서 연구하고 있으며, 이를 바탕으로 다양한 국제 학회에서 논문을 발표하고 있습니다. 그는 또한 국내외 다수의 대학과 연구소에서 연구원으로 활동하고 있으며, 국내외 대학에서 초청 강연을 하기도 합니다.
         </p>
       </div>
     </div>

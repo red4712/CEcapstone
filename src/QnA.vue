@@ -2,9 +2,9 @@
   <Header></Header>
   <Nav></Nav>
   <div>
-    <h1>자주 묻는 질문</h1>
-    <ul>
-      <li v-for="faq in faqs" :key="faq.id" @click="toggleAnswer(faq)">
+    <h1 style="text-align:center">자주 묻는 질문</h1>
+    <ul class="que_ul">
+      <li class="que_li" v-for="faq in faqs" :key="faq.id" @click="toggleAnswer(faq)">
         <h2 class="que">{{ faq.question }}</h2>
         <p class="ans" v-if="faq.showAnswer">{{ faq.answer }}</p>
       </li>
@@ -78,27 +78,33 @@ export default {
 };
 </script>
 <style scoped>
-ul {
+.que_ul {
   list-style: none;
   padding: 20;
 }
 
-li {
+.que_li {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
   margin-bottom: 2rem;
   cursor: pointer;
+  background: gray;
+  margin-right:100px;
+  margin-left:100px;
 }
 
 .que {
   font-size: 14pt;
   margin-bottom: 1rem;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .ans {
   font-size: 15pt;
   /* line-height: 1; */
   text-align: center;
-  color: white;
+  color: black;
 }
 </style>

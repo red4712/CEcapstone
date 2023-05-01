@@ -1,22 +1,8 @@
 <template>
   <div class="container">
-    <div class="form-container">
-      <form class="login-form" v-on:submit.prevent="submitForm">
-        <div>
-          <label for="title">제목:</label>
-          <input id="Testname" type="text" v-model="Testname" class="input-field" />
-        </div>
-        <div>
-          <label for="content">내용:</label>
-          <input id="testage" type="text" v-model="testage" class="input-field" />
-        </div>
-        <div>
-          <label for="content">내용:</label>
-          <input id="tesslk" type="text" v-model="tesslk" class="input-field" />
-        </div>
-        <button type="submit" class="submit-button">글쓰기</button>
-      </form>
-    </div>
+    <div>
+    <MapKakao :latitude="37.39843974939604" :longitude="127.10972941510465" />
+  </div>
     <div class="intro-container">
       <h3 style="color: black">목포관광 홈페이지에 오신 것을 환영합니다.</h3>
       <p style="color: black">
@@ -33,35 +19,15 @@
 </template>
 
 <script>
-import axios from "axios";
+
+import MapKakao from './MapKakao.vue';
 
 export default {
-  data() {
-    return {
-      title: "",
-      testage: "",
-      tesslk: "",
-    };
-  },
-  methods: {
-    submitForm() {
-      axios
-        .post("http://127.0.0.1:8000/api/test/", {
-          Testname: this.Testname,
-          testage: this.testage,
-          tesslk: this.tesslk,
-        })
-        .then((response) => {
-          console.log(response.data);
-          // 데이터 전송 성공 시 처리할 코드 작성
-        })
-        .catch((error) => {
-          console.log(error);
-          // 데이터 전송 실패 시 처리할 코드 작성
-        });
-    },
-  },
-};
+  components: {
+    MapKakao
+  }
+}
+
 </script>
 
 <style>

@@ -18,10 +18,10 @@ export default {
   data() {
     return {
       images: [
-        require("@/assets/card1.png"),
-        require("@/assets/card2.png"),
-        require("@/assets/card3.png"),
-        require("@/assets/card4.png"),
+        require("@/assets/목포1.jpg"),
+        require("@/assets/목포2.jpg"),
+        require("@/assets/목포3.jpg"),
+        require("@/assets/목포4.jpg"),
       ],
       currentSlide: 0,
       timerId: null,

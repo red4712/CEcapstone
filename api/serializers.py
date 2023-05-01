@@ -5,41 +5,22 @@ from django.contrib.auth.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = [
-            'id',
-            'username',
-            'email',
-            'password']
+        fields = '__all__'
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-            'id',
-            'title',
-            'content',
-        )
+        fields = '__all__'
         model = Post
 
 class TestSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-            'id',
-            'Testname',
-            'testage',
-            'tesslk',
-        )
+        fields = '__all__'
         model = Test
 
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = (
-            'id',
-            'subject',
-            'modify_date',   
-            'content', 
-            'imgfile', 
-            'create_date')
+        fields = '__all__'
 
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:

@@ -2,7 +2,6 @@
 <template>
   <div id="map"></div>
 </template>
-
 <script>
 export default {
   name: "MapKakao",
@@ -64,7 +63,7 @@ export default {
 
 <style>
 #map {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
 }
 </style>

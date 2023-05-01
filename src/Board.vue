@@ -2,8 +2,24 @@
   <Header></Header>
   <div class="board">
     <h1 class="board_title">게시판</h1>
+    <v-btn @click="showCreateModal = true">글쓰기</v-btn>
+    <div class="modal" v-if="showCreateModal">
+      <div class="modal-content">
+        <span class="close-btn" @click="showCreateModal = false">&times;</span>
+        <h2>글쓰기</h2>
+        <form @submit.prevent="createPost">
+          <label for="title">제목:</label>
+          <input type="text" id="title" v-model="title" />
+          <br />
+          <label for="content">내용:</label>
+          <textarea id="content" v-model="content"></textarea>
+          <br />
+          <button type="submit">작성</button>
+        </form>
+      </div>
+    </div>
     <ul class="board_ul">
-      <li v-for="post in displayedPosts" :key="post.id">
+      <li class="board_li" v-for="post in displayedPosts" :key="post.id">
         <h2 class="board_h2">{{ post.id }}</h2>
         <p class="board__p">{{ post.title }}</p>
         <p>작성자: {{ post.content }}</p>
@@ -27,20 +43,18 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import axios from "axios";
 
 export default {
-  components: {
-    Header,
-    Footer,
-  },
+  name: "Board",
   data() {
     return {
       posts: [],
       currentPage: 1,
       postsPerPage: 10,
+      showCreateModal: false, // 글쓰기 모달 팝업 표시 여부
+      title: "", // 새로운 글 제목
+      content: "", // 새로운 글 내용
     };
   },
   computed: {
@@ -63,29 +77,53 @@ export default {
     axios
       .get("http://127.0.0.1:8000/api/")
       .then((response) => {
-        this.posts = response.data.sort((a, b) => b.id - a.id); // 역순 정렬
+        this.posts = response.data.sort((a, b) => b.id - a.id);
       })
       .catch((error) => {
         console.log(error);
       });
   },
-
+  
   methods: {
     deletePost(id) {
       axios
         .delete(`http://127.0.0.1:8000/api/${id}/`)
         .then(() => {
-          // 삭제 요청이 성공하면 게시판에서 해당 게시물을 제거합니다.
           this.posts = this.posts.filter((post) => post.id !== id);
         })
         .catch((error) => {
           console.log(error);
         });
     },
+    createPost() {
+      const formData = new FormData();
+      formData.append("title", this.title);
+      formData.append("content", this.content);
+
+      axios
+        .post("http://127.0.0.1:8000/api/", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((response) => {
+          console.log(response);
+          // 데이터 전송 성공 시 처리할 코드 작성
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      // 입력 폼을 초기화합니다.
+      this.title = "";
+      this.content = "";
+
+      // 모달 팝업을 닫습니다.
+      this.showCreateModal = false;
+    },
   },
 };
 </script>
-
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -114,7 +152,7 @@ body {
   padding: 0;
 }
 
-li {
+.board_li {
   border: 1px solid var(--primary-color);
   border-radius: 20px;
   margin-bottom: 20px;
@@ -123,18 +161,18 @@ li {
   color: #f5f5f5;
 }
 
-li:hover {
+/* li:hover {
   transform: translateY(-5px);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-}
+} */
 
-h1 {
+.board_title {
   text-align: center;
   color: var(--primary-color);
 }
 
-h2 {
+.board_h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
